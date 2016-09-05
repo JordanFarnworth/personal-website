@@ -9,4 +9,4 @@
 #video {width: 100%;}
 #inst-link {color: #A1DAED;}
 #main-img {height: 350px; width: 450px; border-radius: 5px;}
-body {-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;background-repeat:no-repeat;}
+body {overflow: hidden;background-size: cover;background-position: center;}

@@ -8,6 +8,7 @@ export default class App extends Component {
   componentDidMount() {
     detecter = new MobileDetect(window.navigator.userAgent);
     isMobile = detecter.match('Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini')
+    debugger
     if(isMobile){
       $('video').hide()
       $('body').css("background-image", "url(https://s3-us-west-2.amazonaws.com/videos-jordan/monitor-933392.jpg)");
