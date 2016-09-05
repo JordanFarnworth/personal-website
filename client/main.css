@@ -9,4 +9,5 @@
 #video {width: 100%;}
 #inst-link {color: #A1DAED;}
 #main-img {height: 350px; width: 450px; border-radius: 5px;}
+#middle-p {margin-top: -20px;margin-bottom: -10px}
 body {overflow: hidden;background-size: cover;background-position: center;}

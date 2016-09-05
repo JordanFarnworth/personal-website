@@ -8,7 +8,6 @@ export default class App extends Component {
   componentDidMount() {
     detecter = new MobileDetect(window.navigator.userAgent);
     isMobile = detecter.match('Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini')
-    debugger
     if(isMobile){
       $('video').hide()
       $('body').css("background-image", "url(https://s3-us-west-2.amazonaws.com/videos-jordan/monitor-933392.jpg)");
@@ -45,7 +44,7 @@ export default class App extends Component {
             <h1>Jordan Farnworth</h1>
             <img className="img-responsive center-block" id="main-img" src="https://s3-us-west-2.amazonaws.com/videos-jordan/me.jpg" ></img>
             <p>Full Stack Developer</p>
-            <p>at <span><a id="inst-link" href="https://www.instructure.com/" target="_blank" >Instructure</a></span></p>
+            <p id="middle-p" >at <span><a id="inst-link" href="https://www.instructure.com/" target="_blank" >Instructure</a></span></p>
             <p>farnworth.jordan@gmail.com</p>
             <div id="icons">
               {this.renderIcons()}
