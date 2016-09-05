@@ -12,7 +12,7 @@ if [ $1 = "stream" ]; then
    git add -u
 fi
 echo 'commiting'
-echo \""$2"\"
-git commit -m \""$2"\"
+echo "$2"
+git commit -m "$2"
 echo 'pushing..'
 git push $3 $4
