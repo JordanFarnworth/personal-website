@@ -23,8 +23,13 @@ export class App extends Component {
 
   render() {
     return (
-      <div>
-        { this.props.children }
+      <div id="Container">
+        <div id="Video">
+          <video preload="preload" id="video" autoPlay="autoplay" loop="loop">
+            <source src="https://s3-us-west-2.amazonaws.com/videos-jordan/code.mp4" type="video/mp4"></source>
+          </video>
+          { this.props.children }
+        </div>
       </div>
     );
   }

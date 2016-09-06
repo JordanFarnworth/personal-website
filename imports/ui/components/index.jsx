@@ -25,21 +25,14 @@ export class Index extends Component {
 
   render() {
     return (
-      <div id="Container">
-        <div id="Video">
-          <video preload="preload" id="video" autoPlay="autoplay" loop="loop">
-            <source src="https://s3-us-west-2.amazonaws.com/videos-jordan/code.mp4" type="video/mp4"></source>
-          </video>
-          <div id="Message">
-            <h1>Jordan Farnworth</h1>
-            <img className="img-responsive center-block" id="main-img" src="https://s3-us-west-2.amazonaws.com/videos-jordan/me.jpg" ></img>
-            <p>Full Stack Developer</p>
-            <p>at <span><a id="inst-link" href="https://www.instructure.com/" target="_blank" >Instructure</a></span></p>
-            <p>farnworth.jordan@gmail.com</p>
-            <div id="icons">
-              {this.renderIcons()}
-            </div>
-          </div>
+      <div id="main">
+        <h1>Jordan Farnworth</h1>
+        <img className="img-responsive center-block" id="main-img" src="https://s3-us-west-2.amazonaws.com/videos-jordan/me.jpg" ></img>
+        <p>Full Stack Developer</p>
+        <p>at <span><a id="inst-link" href="https://www.instructure.com/" target="_blank" >Instructure</a></span></p>
+        <p>farnworth.jordan@gmail.com</p>
+        <div id="icons">
+          {this.renderIcons()}
         </div>
       </div>
     );

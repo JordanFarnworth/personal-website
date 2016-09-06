@@ -1,6 +1,5 @@
 import React, { Component, PropTypes } from 'react';
 
-// Task component - represents a single todo item
 export default class Icon extends Component {
   handleMouseOver(event) {
     let element = event.target
@@ -16,7 +15,7 @@ export default class Icon extends Component {
 
   render() {
     return (
-      <a onMouseLeave={this.handleMouseOut} onMouseEnter={this.handleMouseOver} href={this.props.link} >
+      <a onMouseLeave={this.handleMouseOut} onMouseEnter={this.handleMouseOver} target="blank" href={this.props.link} >
         <i id={this.props.id} className={"fa " + this.props.name} ></i>
       </a>
     );
