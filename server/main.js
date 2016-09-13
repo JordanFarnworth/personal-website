@@ -1,6 +1,6 @@
 import Moment from 'moment';
 import { Meteor } from 'meteor/meteor';
-import { Messages } from '../lib/collections';
+// import { Messages } from '../lib/collections';
 
 Meteor.startup(() => {
 
