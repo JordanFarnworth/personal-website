@@ -7,7 +7,7 @@ import { Blaze } from 'meteor/blaze';
 import { Mongo } from 'meteor/mongo';
 import { createContainer } from 'meteor/react-meteor-data';
 
-export class Chat extends Component {
+export default class Chat extends Component {
 
   // constructor(props) {
   //   super(props)
@@ -37,7 +37,7 @@ export class Chat extends Component {
   // }
 
   renderMessages(){
-    return [].map((message) => (
+    return this.props.messages.map((message) => (
       <p>{message.text}</p>
     ));
   }
@@ -90,7 +90,7 @@ export default createContainer(() => {
   console.log('create container');
   return {
     // currentUser: Meteor.user(),
-    messages: []
+    messages: Messages.find().fetch()
     // listLoading: ! handle.ready()
   };
 }, Chat);
