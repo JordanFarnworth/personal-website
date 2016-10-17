@@ -1,8 +1,8 @@
 
-#main { color:white; }
+#main { color:white; overflow-x: hidden;}
 .logo-img { height: 100px;margin: 0 auto;}
 .logo-wrapper {padding-top: 25px; padding-bottom: 25px;}
-#charger-controller {position:fixed;top:0;right:0;}
+#charger-controller {}
 #myContent { width: 100%; height: 100% }
 #intro h1{font-size: 5em;color:#ffffff;text-align:center; margin: 0;}
 #skills h1{font-size: 4em;color:#ffffff;text-align:center; margin: 0;}
@@ -18,10 +18,10 @@
 #middle-p {margin-top: -20px;margin-bottom: -10px}
 #chats {height: 400px;overflow-y: hidden;}
 #login {text-align:center;}
-#intro {height: 1075px; width: 100%; background-repeat: no-repeat;background-size: cover;}
-#skills {height: 800px; background-color: #aaaaaa; padding-right: 20px; padding-left: 15px;height: 950px; }
+#intro {height: 900px; width: 100%; background-repeat: no-repeat;background-size: cover;}
+#skills {height: 800px; background-image: url('gradient-grey.jpg'); padding-right: 20px; padding-left: 15px;height: 950px; }
 #history {height: 800px;}
 #clients {height: 800px;}
 #social-media {height: 600px;}
-body {position: relative;}
+body {overflow-x: hidden;}
 #messages_frd {padding: 10px 10px 10px 10px;}

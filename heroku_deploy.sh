@@ -1,4 +1,8 @@
 #!/bin/bash
+# first arg (all|stream) - get all code, or only what is in the git stream
+# second arg (commit message) - the commit message for heroku
+# third arg (name of remote) - ex: origin or heroku
+# fourth arg (branch name) - ex: master, production, test
 echo 'clearing buildpack'
 heroku buildpacks:clear
 echo 'adding buildpack'

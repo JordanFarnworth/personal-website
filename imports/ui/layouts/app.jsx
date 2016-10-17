@@ -8,19 +8,11 @@ export class App extends Component {
   constructor(props) {
     super(props)
 
-    this.state = {charged: false}
-
     if(this.props.location.pathname === '/'){
       location.replace("/index");
     }
   }
 
-  componentDidMount(){
-    if(this.isMobile()){
-      this.charge()
-      this.state.charged = true;
-    }
-  }
 
   isMobile() {
     var detecter = new MobileDetect(window.navigator.userAgent);
@@ -81,41 +73,10 @@ export class App extends Component {
     Interdimensional.toggle();
   }
 
-  charge() {
-    Interdimensional.charge(
-      {
-        /**
-         * Pixels per difference between tilts
-         * @type {Number}
-         */
-        PPD: 0.8,
-        /**
-         * Minimum difference between tilts
-         * @type {Number}
-         */
-        insensitivity: 5,
-        /**
-         * Use the control or not
-         * @type {Boolean}
-         */
-        useControl: true,
-        /**
-         * Interdimensional control
-         *
-         * If null - default control will be used
-         * control: document.getElementById('myControl')
-         *
-         * @type {HTMLElement|null}
-         */
-        control: document.getElementById('myControl')
-      }
-    );
-  }
-
   render() {
     return (
       <div id="myControl">
-        {React.cloneElement(this.props.children, {toggleCharge: this.toggleCharge, charged: this.state.charged, icons: this.listIcons, logos: this.listLogos, isMobile: this.isMobile.bind(this) })}
+        {React.cloneElement(this.props.children, {charge: this.charge, toggleCharge: this.toggleCharge, icons: this.listIcons, logos: this.listLogos, isMobile: this.isMobile.bind(this) })}
       </div>
     );
   }

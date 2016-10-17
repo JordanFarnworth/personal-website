@@ -10,11 +10,6 @@ export class Index extends Component {
   constructor(props) {
     super(props)
 
-    if(this.props.isMobile()){
-        this.state = {charged: false}
-    } else {
-      this.state = {charged: true}
-    }
   }
 
   componentWillMount(){
@@ -24,13 +19,15 @@ export class Index extends Component {
       easing: 'ease-in-sine',
       delay: 100,
     });
+    if(this.props.isMobile()){
+      Interdimensional.charge();
+    }
   }
 
   componentDidMount(){
+    Interdimensional.kick();
     $("#main").animate({ scrollTop: 0 }, "fast");
     $('#intro').css("background-image", "url(space.jpg)");
-    var switches = document.querySelector('.js-switch');
-    var init = new Switchery(switches);
     if(this.props.isMobile()){
       $('#skills').css("height", "1875");
       $('#intro').css("height", "850");
@@ -39,6 +36,10 @@ export class Index extends Component {
         speed: 0.2
       });
       parallax.animate();
+      var parallaxMain = new Parallax('#main-img', {
+        speed: 0.1
+      });
+      parallaxMain.animate();
     }
   }
 
@@ -70,25 +71,9 @@ export class Index extends Component {
     return string;
   }
 
-  determineCharge(){
-    this.props.toggleCharge()
-    this.state.charged = !this.state.charged
-    this.setState(this.state);
-  }
-
-  renderChargeController(){
-    return (
-      <div id="charger-controller">
-        <input onChange={this.determineCharge.bind(this)} type="checkbox" className="js-switch" checked={!this.state.charged} >
-        </input>
-      </div>
-    )
-  }
-
   render() {
     return (
       <div id="main" >
-        {this.renderChargeController()}
         <div id="intro">
           {this.renderBreaks(3)}
           <img data-aos={this.dataAos("flip-left")} data-aos-easing="ease-out-cubic" data-aos-duration="2000" className="img-responsive img-circle " id="main-img" src="https://s3-us-west-2.amazonaws.com/videos-jordan/me.jpg" ></img>
@@ -107,10 +92,7 @@ export class Index extends Component {
 
         <div id="skills">
           <div>
-            <h1 className="text-center">
-              Highly Proficient Libraries/Langugages
-            </h1>
-
+            <h2 className="text-center">Things I am good at</h2>
             <div className="row">
               {this.renderLogos()}
             </div>
