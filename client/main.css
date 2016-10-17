@@ -1,17 +1,27 @@
 
-#Container {width: 100%; height: 360px; position: relative;}
-#Video,#main {width: 100%; height: 360px; position: absolute; top: 0; left: 0;}
-#main {text-shadow: 2px 2px 2px #000000; color:white; }
-#main h1{font-size: 5em;color:#A1DAED;text-align:center;}
-#main h5{font-size: 1em;color:#A1DAED;}
-#main p{font-size: 2em;color:#ffffff;text-align:center;}
+#main { color:white; }
+.logo-img { height: 100px;margin: 0 auto;}
+.logo-wrapper {padding-top: 25px; padding-bottom: 25px;}
+#charger-controller {position:fixed;top:0;right:0;}
+#myContent { width: 100%; height: 100% }
+#intro h1{font-size: 5em;color:#ffffff;text-align:center; margin: 0;}
+#skills h1{font-size: 4em;color:#ffffff;text-align:center; margin: 0;}
+#intro h2{color:#ffffff;text-align:center; margin: 0;}
+#intro h3{font-size: 2em;color:#ffffff;text-align:center; margin: 0;}
+#intro p{font-size: 1.5em;color:#ffffff;text-align:center;margin-top: -175px;}
 #icons {text-align:center; height: 100px;}
+.icons {margin-left: 15px; margin-right: 15px; position: relative; top: -10px;}
 .fa {font-size: 3em;color:#ffffff;padding-left:5px!important;padding-right:5px!important;}
-#video {width: 100%;}
 #inst-link {color: #A1DAED;}
-#main-img {height: 350px; width: 450px; border-radius: 5px;}
+#main-img {height: 350px; margin: auto;}
+#bb-logo {height: 250px; margin-right: auto;margin-left: auto}
 #middle-p {margin-top: -20px;margin-bottom: -10px}
-body {overflow: hidden;background-size: cover;background-position: center;}
 #chats {height: 400px;overflow-y: hidden;}
 #login {text-align:center;}
+#intro {height: 1075px; width: 100%; background-repeat: no-repeat;background-size: cover;}
+#skills {height: 800px; background-color: #aaaaaa; padding-right: 20px; padding-left: 15px;height: 950px; }
+#history {height: 800px;}
+#clients {height: 800px;}
+#social-media {height: 600px;}
+body {position: relative;}
 #messages_frd {padding: 10px 10px 10px 10px;}

@@ -1,21 +1,22 @@
 import React, { Component, PropTypes } from 'react';
 
 export default class Icon extends Component {
+
   handleMouseOver(event) {
     let element = event.target
     $(element).css("color", "#A1DAED")
-    $(element).animate({fontSize: "5em"}, 500)
+    $(element).animate({fontSize: "5em"}, 75)
   }
 
   handleMouseOut(event) {
     let element = event.target
     $(element).css("color", "white")
-    $(element).animate({fontSize: "3em"}, 300)
+    $(element).animate({fontSize: "3em"}, 75)
   }
 
   render() {
     return (
-      <a onMouseLeave={this.handleMouseOut} onMouseEnter={this.handleMouseOver} target="blank" href={this.props.link} >
+      <a className="icons" onMouseLeave={this.handleMouseOut} onMouseEnter={this.handleMouseOver} target="blank" href={this.props.link} >
         <i id={this.props.id} className={"fa " + this.props.name} ></i>
       </a>
     );

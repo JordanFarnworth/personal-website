@@ -9,7 +9,17 @@ import { Chat } from '../../ui/components/chat.jsx';
 import { Blog } from '../../ui/components/blog.jsx';
 
 
+
 Meteor.startup( () => {
-  render(<Chat />,document.getElementById( 'render-target' )
+  render(
+    <Router history={ browserHistory }>
+      <Route path="/" component={ App }>
+        <Route path="/index" component={ Index } />
+        <Route path="/about" component={ About } />
+        <Route path="/chat" component={ Chat } />
+        <Route path="/blog" component={ Blog } />
+      </Route>
+    </Router>,
+    document.getElementById( 'render-target' )
   );
 });
