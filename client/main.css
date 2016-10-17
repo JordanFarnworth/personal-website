@@ -18,8 +18,9 @@
 #middle-p {margin-top: -20px;margin-bottom: -10px}
 #chats {height: 400px;overflow-y: hidden;}
 #login {text-align:center;}
-#intro {height: 900px; width: 100%; background-repeat: no-repeat;background-size: cover;}
-#skills {height: 800px; background-image: url('gradient-grey.jpg'); padding-right: 20px; padding-left: 15px;height: 950px; }
+#intro {height: 920px; width: 100%; background-repeat: no-repeat;background-size: cover;}
+#good-at {color: #5a98fc;}
+#skills {height: 800px; background-color: "white"; padding-right: 20px; padding-left: 15px;height: 950px; }
 #history {height: 800px;}
 #clients {height: 800px;}
 #social-media {height: 600px;}

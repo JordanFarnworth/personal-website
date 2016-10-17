@@ -92,7 +92,7 @@ export class Index extends Component {
 
         <div id="skills">
           <div>
-            <h2 className="text-center">Things I am good at</h2>
+            <h2 data-aos={this.dataAos("zoom-out")} id="good-at" className="text-center">Things I am good at</h2>
             <div className="row">
               {this.renderLogos()}
             </div>
