@@ -10,14 +10,14 @@ export default class Icon extends Component {
 
   handleMouseOut(event) {
     let element = event.target
-    $(element).css("color", "white")
+    $(element).css("color", "#5a98fc")
     $(element).animate({fontSize: "3em"}, 75)
   }
 
   render() {
     return (
       <a className="icons" onMouseLeave={this.handleMouseOut} onMouseEnter={this.handleMouseOver} target="blank" href={this.props.link} >
-        <i id={this.props.id} className={"fa " + this.props.name} ></i>
+        <i style={{color: "#5a98fc"}} id={this.props.id} className={"fa " + this.props.name} ></i>
       </a>
     );
   }

@@ -23,8 +23,44 @@ export class App extends Component {
     return [
       {_id: 1, name: 'fa-facebook', link: 'https://www.facebook.com/profile.php?id=100009464020291'},
       {_id: 2, name: 'fa-twitter', link: 'https://twitter.com'},
-      {_id: 3, name: 'fa-linkedin-square', link: 'https://www.linkedin.com/in/jordan-farnworth-55820587'},
+      {_id: 3, name: 'fa-linkedin', link: 'https://www.linkedin.com/in/jordan-farnworth-55820587'},
       {_id: 4, name: 'fa-github-alt', link: 'https://github.com/jordanfarnworth'}
+    ]
+  }
+
+  listHistoryTemplates() {
+    var col_four = "col-md-4 col-sm-4 col-xs-4 col-lg-4";
+    return [
+      {
+        _id: 1,
+        name: 'Instructure',
+        link: 'https://www.instructure.com',
+        color: "56b4f7",
+        description: "          \n          \nFullstack Developer \nWorked on flagship app Canvas \nBuilt Independant LTIs\nUsed a variety of integrations",
+        colStrings: col_four,
+        fadeString: "fade-down-right",
+        image: "instructure.png"
+      },
+      {
+        _id: 2,
+        name: 'Compworks',
+        link: 'https://compworkspc.herokuapp.com',
+        color: "333333",
+        description: "Windows OS Hardware and Software Specialist\nConfigured Client Domains \nConfigured PC and Server Hardware \n",
+        colStrings: col_four,
+        fadeString: "fade-up",
+        image: "compworks.png"
+      },
+      {
+        _id: 3,
+        name: 'BrightBytes',
+        color: "f7ac56",
+        link: 'http://brightbytes.net',
+        description: "          \n          \nFullstack Web Developer \nRuby on Rails \nReactJS\nCustom Style Library",
+        colStrings: col_four,
+        fadeString: "fade-down-left",
+        image: "brightbytes.png"
+      }
     ]
   }
 
@@ -76,7 +112,7 @@ export class App extends Component {
   render() {
     return (
       <div id="myControl">
-        {React.cloneElement(this.props.children, {charge: this.charge, toggleCharge: this.toggleCharge, icons: this.listIcons, logos: this.listLogos, isMobile: this.isMobile.bind(this) })}
+        {React.cloneElement(this.props.children, {charge: this.charge, toggleCharge: this.toggleCharge, icons: this.listIcons, historyTemplates: this.listHistoryTemplates, logos: this.listLogos, isMobile: this.isMobile.bind(this) })}
       </div>
     );
   }

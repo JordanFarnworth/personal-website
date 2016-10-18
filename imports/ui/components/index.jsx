@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Grid, Row, Col } from 'react-bootstrap';
 import Icon from '../components/Icon.jsx';
 import Logo from '../components/logo.jsx';
+import HistoryTemplate from '../components/historyTemplates.jsx';
 import AOS from 'aos';
 import Parallax from 'parallax-scroll';
 var MobileDetect = require('mobile-detect');
@@ -9,7 +10,6 @@ var MobileDetect = require('mobile-detect');
 export class Index extends Component {
   constructor(props) {
     super(props)
-
   }
 
   componentWillMount(){
@@ -71,6 +71,14 @@ export class Index extends Component {
     return string;
   }
 
+  renderHistoryTemplates(){
+    var dataAos = this.dataAos;
+    var isMobile = this.props.isMobile;
+    return this.props.historyTemplates().map((template) => (
+      <HistoryTemplate color={template.color} dataAos={dataAos} isMobile={isMobile} _id={template._id} name={template.name} image={template.image} link={template.link} description={template.description} colStrings={template.colStrings} fadeString={template.fadeString} key={template._id}></HistoryTemplate>
+    ));
+  }
+
   render() {
     return (
       <div id="main" >
@@ -84,9 +92,10 @@ export class Index extends Component {
             <h3>Full Stack Web Developer - Data Scientist - Contract Programming Consultant</h3>
             {this.renderBreaks(1)}
             <a href="http://brightbytes.net/" target="blank" >
-              <img className="center-block" id="bb-logo" src="brightbytes.png" ></img>
+              <img className="center-block img-responsive" id="bb-logo" src="brightbytes.png" ></img>
             </a>
           </div>
+          {this.renderBreaks(1)}
           <p>farnworth.jordan@gmail.com</p>
         </div>
 
@@ -100,15 +109,19 @@ export class Index extends Component {
         </div>
 
         <div id="history">
-          <h1>History</h1>
+          {this.renderBreaks(12)}
+          <h2 data-aos={this.dataAos("fade-down")}>Professional History Highlights</h2>
+
+          <div id="historyTemplates" className="row">
+            {this.renderHistoryTemplates()}
+          </div>
         </div>
 
         <div id="clients">
-          <h1>Clients</h1>
+
         </div>
 
-        <div id="social-media">
-          <h1>Social Media</h1>
+        <div className="text-center" id="social-media">
           {this.renderIcons()}
         </div>
       </div>
